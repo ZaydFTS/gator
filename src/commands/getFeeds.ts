@@ -1,4 +1,4 @@
-import { getFeedWithUser } from "./migrations/queries/feed";
+import { getFeedWithUser } from "../migrations/queries/feed";
 
 
 export async function handlerFeeds(

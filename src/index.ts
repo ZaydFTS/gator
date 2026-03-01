@@ -1,18 +1,19 @@
-import { handlerAddFeed } from "./commandAddFeed";
-import { handlerAgg } from "./commandAggHandler";
-import { handlerFollowing } from "./commandFollowing";
-import { handlerFollow } from "./commandFollow";
-import { handlerGetAllUsers } from "./commandGetAllUsers";
-import { handlerFeeds } from "./commandGetFeedHandler";
-import { handlerLogin } from "./commandHnadler";
+import { handlerAddFeed } from "./commands/addFeed";
+import { handlerAgg } from "./commands/agg";
+import { handlerFollowing } from "./commands/following";
+import { handlerFollow } from "./commands/follow";
+import { handlerGetAllUsers } from "./commands/getUsers";
+import { handlerFeeds } from "./commands/getFeeds";
+import { handlerLogin } from "./commands/commandHandler";
 import {
     CommandsRegistry,
     registerCommand,
     runCommand,
-} from "./commandRegistry";
+} from "./commands/registry";
 import { handlerRegister, handlerTruncate } from "./migrations/queries/register";
-import { middlewareLoggedIn } from "./middlewareLoggedIn";
-import { handlerUnfollow } from "./commandUnfollow";
+import { middlewareLoggedIn } from "./middleware/loggedIn";
+import { handlerUnfollow } from "./commands/unfollow";
+import { handlerBrowse } from "./commands/browse";
 
 async function main() {
 
@@ -30,6 +31,11 @@ async function main() {
         registry,
         "unfollow",
         middlewareLoggedIn(handlerUnfollow)
+    );
+    registerCommand(
+        registry,
+        "browse",
+        middlewareLoggedIn(handlerBrowse)
     )
 
     const args = process.argv.slice(2);

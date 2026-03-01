@@ -1,6 +1,6 @@
 import { read } from "node:fs";
-import { getUsers } from "./migrations/queries/users";
-import { readConfig } from "./config";
+import { getUsers } from "../migrations/queries/users";
+import { readConfig } from "../core/config";
 
 
 

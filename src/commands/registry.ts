@@ -1,4 +1,4 @@
-import { CommandHandler } from "./commandHnadler";
+import { CommandHandler } from "./commandHandler";
 
 export type CommandsRegistry = {
     [commandName: string]: CommandHandler;

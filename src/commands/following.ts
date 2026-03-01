@@ -1,5 +1,5 @@
-import { getFeedFollowsForUser } from "./migrations/queries/feedFollows";
-import { User } from "./schema";
+import { getFeedFollowsForUser } from "../migrations/queries/feedFollows";
+import { User } from "../core/schema";
 
 export async function handlerFollowing(
     cmdName: string,

@@ -1,5 +1,5 @@
-import { deleteFeedFollowByUrl } from "./migrations/queries/feedFollows";
-import { User } from "./schema";
+import { deleteFeedFollowByUrl } from "../migrations/queries/feedFollows";
+import { User } from "../core/schema";
 
 
 export async function handlerUnfollow(

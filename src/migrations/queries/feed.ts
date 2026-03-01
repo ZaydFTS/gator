@@ -1,7 +1,7 @@
 
-import { Feed, users } from "../../schema";
+import { Feed, users } from "../../core/schema";
 import { db } from "..";
-import { feeds } from "../../schema";
+import { feeds } from "../../core/schema";
 import { eq } from "drizzle-orm";
 import { sql } from "drizzle-orm";
 

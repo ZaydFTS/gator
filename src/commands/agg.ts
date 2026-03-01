@@ -1,5 +1,5 @@
-import { scrapeFeeds } from "./scrapeFeeds";
-import { parseDuration } from "./parseDuration";
+import { scrapeFeeds } from "../services/scraper";
+import { parseDuration } from "../utils/parseDuration";
 
 export async function handlerAgg(
     cmdName: string,

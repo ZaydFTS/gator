@@ -1,6 +1,7 @@
-import { getNextFeedToFetch, markFeedFetched } from "./migrations/queries/feed";
-import { fetchFeed } from "./RSS/fetchFeed";
-import { createPost } from "./migrations/queries/posts";
+import { getNextFeedToFetch, markFeedFetched } from "../migrations/queries/feed";
+import { fetchFeed } from "./rss/fetchFeed";
+import { createPost } from "../migrations/queries/posts";
+import { parsePublishedDate } from "../utils/parsePublishedDate";
 
 export async function scrapeFeeds() {
     const feed = await getNextFeedToFetch();

@@ -1,5 +1,5 @@
-import { User } from "./schema";
-import { getPostsForUser } from "./migrations/queries/posts";
+import { User } from "../core/schema";
+import { getPostsForUser } from "../migrations/queries/posts";
 
 export async function handlerBrowse(
     cmdName: string,

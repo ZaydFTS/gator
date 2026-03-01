@@ -1,6 +1,6 @@
-import { getFeedByUrl } from "./migrations/queries/feed";
-import { createFeedFollow } from "./migrations/queries/feedFollows";
-import { User } from "./schema";
+import { getFeedByUrl } from "../migrations/queries/feed";
+import { createFeedFollow } from "../migrations/queries/feedFollows";
+import { User } from "../core/schema";
 
 export async function handlerFollow(
     cmdName: string,

@@ -1,4 +1,4 @@
-import { Feed, User } from "../../schema";
+import { Feed, User } from "../../core/schema";
 
 export function printFeed(
   feed: Feed,

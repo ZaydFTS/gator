@@ -1,7 +1,7 @@
-import { getUserByName } from "./migrations/queries/users";
-import { setUser } from "./config";
+import { getUserByName } from "../migrations/queries/users";
+import { setUser } from "../core/config";
 import { get } from "node:http";
-import { User } from "./schema";
+import { User } from "../core/schema";
 
 export type CommandHandler = (cmdName: string, ...args: string[]) => Promise<void>;
 
@@ -27,6 +27,3 @@ export async function handlerLogin(cmdName: string, ...args: string[]): Promise<
     setUser(userName);
     console.log(`User set to ${userName}`);
 }
-
-
-

@@ -1,8 +1,8 @@
 import { createUser, getUserByName } from "./users";
-import { setUser } from "../../config";
-import type { CommandHandler } from "../../commandHnadler";
+import { setUser } from "../../core/config";
+import type { CommandHandler } from "../../commands/commandHandler";
 import { db } from "..";
-import { users } from "../../schema";
+import { users } from "../../core/schema";
 
 
 

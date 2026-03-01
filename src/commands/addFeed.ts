@@ -1,7 +1,7 @@
-import { createFeed } from "./migrations/queries/feed";
-import { printFeed } from "./migrations/queries/printFeed";
-import { createFeedFollow } from "./migrations/queries/feedFollows";
-import { User } from "./schema";
+import { createFeed } from "../migrations/queries/feed";
+import { printFeed } from "../migrations/queries/printFeed";
+import { createFeedFollow } from "../migrations/queries/feedFollows";
+import { User } from "../core/schema";
 
 export async function handlerAddFeed(
     cmdName: string,

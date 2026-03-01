@@ -1,6 +1,6 @@
-import { readConfig } from "./config";
-import { getUserByName } from "./migrations/queries/users";
-import { UserCommandHandler, CommandHandler } from "./commandHnadler";
+import { readConfig } from "../core/config";
+import { getUserByName } from "../migrations/queries/users";
+import { UserCommandHandler, CommandHandler } from "../commands/commandHandler";
 
 export function middlewareLoggedIn(
     handler: UserCommandHandler
